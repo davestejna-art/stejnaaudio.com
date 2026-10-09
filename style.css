@@ -141,8 +141,8 @@ li::marker { color: var(--dim); }
 .big-link { font-size: 20px; font-weight: 700; }
 
 /* ---- footer */
-.site-foot { margin-top: 80px; border-top: 1px solid var(--rule); padding: 28px 0 44px; color: var(--dim); font-size: 14px; }
-.site-foot p { margin: 0 0 10px; max-width: 60em; }
-.site-foot ul { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 0 0 16px; padding: 0; }
+.site-foot { margin-top: 80px; border-top: 1px solid var(--rule); padding: 28px 0 44px; color: var(--dim); font-size: 14px; text-align: center; }
+.site-foot p { margin: 0 auto 10px; max-width: 60em; }
+.site-foot ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 20px; margin: 0 0 16px; padding: 0; }
 .site-foot a { color: var(--text); }
 .site-foot a:hover { color: var(--ink); }
