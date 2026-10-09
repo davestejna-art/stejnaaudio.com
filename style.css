@@ -68,7 +68,7 @@ strong { color: var(--ink); }
 }
 .vfd-well img { width: 100%; }
 .lede { margin: 24px auto 0; max-width: 34em; color: var(--ink); font-size: clamp(19px, 2.4vw, 22px); line-height: 1.5; }
-.compat { margin: 10px auto 0; color: var(--dim); }
+.compat { margin: 10px auto 0; color: var(--dim); text-align: center; }
 .status { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 24px 0 0; padding: 0; list-style: none; }
 .pill {          /* pills show a STATE, never an action */
   display: inline-block; padding: 7px 16px; border-radius: 999px; font-size: 13px; font-weight: 700;
@@ -122,7 +122,7 @@ strong { color: var(--ink); }
 .card li li { margin-bottom: 4px; }
 li::marker { color: var(--dim); }
 
-.about { max-width: 720px; }
+.about { max-width: 720px; text-align: center; }
 
 /* ---- reading pages (support, privacy) */
 .prose { max-width: 720px; padding-top: 48px; }
