@@ -124,6 +124,16 @@ li::marker { color: var(--dim); }
 
 .about { max-width: 720px; text-align: center; }
 
+/* a feature spotlight: a pane of glass, the phosphor on it */
+.spotlight {
+  max-width: 820px; margin: 0 auto; padding: 32px clamp(18px, 4vw, 44px); text-align: center; border-radius: 10px;
+  background: var(--glass); border: 1px solid var(--rule); box-shadow: inset 0 1px 0 rgba(0, 0, 0, .6), 0 10px 30px rgba(0, 0, 0, .35);
+}
+.spotlight .kicker { color: var(--cyan); text-shadow: 0 0 8px rgba(114, 233, 233, .45); }
+.spotlight h2 { margin: 10px 0 14px; font-size: clamp(22px, 3vw, 30px); }
+.spotlight p { margin: 0 auto 12px; max-width: 40em; color: var(--ink); }
+.spotlight .how { margin-bottom: 0; color: var(--dim); font-size: 15px; }
+
 /* ---- reading pages (support, privacy) */
 .prose { max-width: 720px; padding-top: 48px; }
 .prose h1 { margin: 6px 0 6px; font-size: clamp(28px, 4vw, 34px); }
