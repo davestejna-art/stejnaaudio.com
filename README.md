@@ -12,7 +12,7 @@ nothing loaded from other sites.
 | `404.html` | not found |
 | `style.css` | the one stylesheet |
 | `img/` | emblem and title SVGs, icons, link-preview image, iPad screenshots (`shots/NN_name-800.webp` and `-1600.webp`), iPhone screenshots (`phone/NN_name-900.webp` and `-1800.webp`) |
-| `video/` | the iPad App Preview for the web (`stejna-mix-ipad.mp4`, silent, 1280 x 960) and its poster |
+| `video/` | the App Previews for the web, each silent with a poster: iPad (`stejna-mix-ipad.mp4`, 1280 x 960) and Pocket Mix (`pocket-mix-iphone.mp4`, 1280 x 590) |
 
 The header and footer are repeated in each page; change all of them together.
 

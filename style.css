@@ -179,3 +179,4 @@ li::marker { color: var(--dim); }
 .video video { display: block; width: 100%; height: auto; border-radius: clamp(8px, 1.4vw, 16px); background: var(--glass); }
 .video figcaption { margin-top: 12px; color: var(--dim); font-size: 15px; text-align: center; }
 .spotlight.with-shot img { margin: 22px auto 4px; max-width: 640px; width: 100%; border-radius: 14px; border: 1px solid #2C333B; }
+.video .device.phone video { border-radius: clamp(16px, 3.6vw, 42px); }
