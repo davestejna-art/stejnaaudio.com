@@ -104,6 +104,83 @@ strong { color: var(--ink); }
 @media (min-width: 760px) {
   .shots { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); overflow: visible; gap: 28px 20px; }
 }
+.shots a { cursor: zoom-in; }
+
+/* the screenshot viewer (viewer.js): one picture at a time on dark metal, big previous / next keys, the count on the
+   glass. Landscape: the keys at the sides, full height to hit. Portrait: the keys at the bottom, under your thumbs. */
+:root.viewing { overflow: hidden; }
+.viewer {
+  --side: 92px; --cap: 100px;          /* --cap: the room kept under the picture for its caption */
+  inset: 0; width: auto; height: auto; max-width: none; max-height: none; margin: 0; overflow: hidden;
+  padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  border: 0; color: var(--text); background: #0B0C0E; cursor: zoom-out;
+}
+.viewer::backdrop { background: transparent; }
+.viewer[open] {
+  display: grid; gap: 12px 0;
+  grid-template-columns: var(--side) minmax(0, 1fr) var(--side);
+  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-areas: "count body close" "prev body next";
+  animation: viewer-in .15s ease-out;
+}
+@keyframes viewer-in { from { opacity: 0; } }
+.viewer :where(button) {
+  appearance: none; margin: 0; padding: 0; border: 0; background: none; color: var(--ink); font: inherit;
+  cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; user-select: none;
+}
+.viewer-side:focus-visible { outline: none; }
+.viewer svg { display: block; width: 40px; height: 40px; }
+.viewer-key, .viewer-close {          /* raised-metal keys, like the App Store key */
+  display: grid; place-items: center; border-radius: 14px;
+  background: linear-gradient(var(--bezel-top), var(--bezel-bot)); border: 1px solid #0B0D10;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14), 0 3px 10px rgba(0, 0, 0, .45);
+}
+.viewer button:hover .viewer-key, .viewer-close:hover { color: var(--core); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .18), 0 3px 14px rgba(114, 233, 233, .18); }
+.viewer button:active .viewer-key, .viewer-close:active { background: linear-gradient(var(--bezel-bot), var(--bezel-top)); }
+.viewer-side:focus-visible .viewer-key, .viewer-close:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 14px; }
+.viewer-close { grid-area: close; justify-self: end; align-self: start; width: 64px; height: 64px; }
+.viewer-close svg { width: 32px; height: 32px; }
+.viewer-side { display: grid; place-items: center; }
+.viewer-prev { grid-area: prev; }
+.viewer-next { grid-area: next; }
+.viewer-key { width: 76px; height: 124px; }
+.viewer-count {                       /* a small display: cyan phosphor on the glass */
+  grid-area: count; justify-self: start; align-self: start; margin: 0; padding: 6px 10px; border-radius: 6px;
+  background: var(--glass); border: 1px solid var(--rule); box-shadow: inset 0 1px 0 rgba(0, 0, 0, .6);
+  color: var(--cyan); text-shadow: 0 0 8px rgba(114, 233, 233, .45);
+  font-size: 20px; font-weight: 700; line-height: 1.3; font-variant-numeric: tabular-nums; white-space: nowrap; cursor: default;
+}
+.viewer-body {
+  grid-area: body; min-width: 0; min-height: 0; container-type: size;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.viewer-pic {
+  flex: none; width: min(100cqw, (100cqh - var(--cap)) * var(--ar, 1.333), 1600px); aspect-ratio: var(--ar, 1.333);
+  border-radius: 12px; border: 1px solid #2C333B; background: var(--glass); box-shadow: 0 20px 60px rgba(0, 0, 0, .6); cursor: auto;
+}
+.viewer-cap {
+  flex: none; width: 100%; max-width: 46em; height: var(--cap); margin: 0; padding-top: 14px;
+  color: var(--text); font-size: 18px; line-height: 1.45; text-align: center;
+}
+@supports not (width: 1cqw) { .viewer-pic { width: auto; max-height: calc(100vh - 220px); } }
+@media (orientation: portrait) {
+  .viewer { --cap: 150px; }
+  .viewer[open] {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr) auto; column-gap: 12px;
+    grid-template-areas: ". . close" "body body body" "prev count next";
+  }
+  .viewer-count { align-self: center; justify-self: center; }
+  .viewer-side { padding-top: 12px; }   /* reach a little above the key too */
+  .viewer-prev { justify-items: start; }
+  .viewer-next { justify-items: end; }
+  .viewer-key { width: min(100%, 200px); height: 76px; }
+}
+@media (orientation: landscape) and (max-height: 540px) {   /* a phone on its side: all the height to the picture */
+  .viewer { --cap: 0px; }
+  .viewer-cap { display: none; }
+  .viewer-key { height: 96px; }
+}
 
 /* features: rack-module cards in balanced columns */
 .features { margin-top: 24px; columns: 2 380px; column-gap: 20px; }

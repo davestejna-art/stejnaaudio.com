@@ -1,7 +1,7 @@
 # stejnaaudio.com
 
-The Stejna Audio website: plain HTML and one stylesheet. No build step, no frameworks, no cookies, no analytics,
-nothing loaded from other sites.
+The Stejna Audio website: plain HTML, one stylesheet and one small script. No build step, no frameworks, no cookies,
+no analytics, nothing loaded from other sites.
 
 | path | page |
 |---|---|
@@ -10,6 +10,7 @@ nothing loaded from other sites.
 | `support/index.html` | /support: contact, compatibility, FAQ |
 | `privacy/index.html` | /privacy: the Stejna Mix privacy policy (App Store Connect links here) |
 | `404.html` | not found |
+| `viewer.js` | the screenshot viewer: a screenshot opens big, to page through with the arrows, a swipe or the arrow keys; the X, Escape, a tap beside it or Back closes it. Pages with a `.shots` list load it; without JavaScript the link opens the picture by itself |
 | `style.css` | the one stylesheet |
 | `img/` | emblem and title SVGs, icons, link-preview image, iPad screenshots (`shots/NN_name-800.webp` and `-1600.webp`), iPhone screenshots (`phone/NN_name-900.webp` and `-1800.webp`) |
 | `video/` | the App Previews for the web, each silent with a poster: iPad (`stejna-mix-ipad.mp4`, 1280 x 960) and Pocket Mix (`pocket-mix-iphone.mp4`, 1280 x 590) |
