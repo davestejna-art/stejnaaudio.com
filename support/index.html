@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Stejna Mix Support · Stejna Audio</title>
-<meta name="description" content="Help for Stejna Mix, the iPad mixer app by Stejna Audio: contact, compatibility, installing the TestFlight beta, and connecting to your mixer.">
+<meta name="description" content="Help for Stejna Mix, the mixer app for iPad and iPhone by Stejna Audio: contact, compatibility, installing, the full mixer unlock, and connecting to your mixer.">
 <link rel="canonical" href="https://stejnaaudio.com/support/">
 <meta name="theme-color" content="#141518">
 <link rel="icon" href="/img/emblem.svg" type="image/svg+xml">
@@ -19,6 +19,7 @@
     <nav aria-label="Site">
       <ul>
         <li><a href="/">Stejna Mix</a></li>
+        <li><a href="/pocket-mix/">Pocket Mix</a></li>
         <li><a href="/support/" aria-current="page">Support</a></li>
         <li><a href="/privacy/">Privacy</a></li>
       </ul>
@@ -33,53 +34,67 @@
 
     <div class="contact">
       <p>Email <a class="big-link" href="mailto:support@stejnaaudio.com">support@stejnaaudio.com</a></p>
-      <p>To help us help you quickly, include your iPad model, the iPadOS version, the Stejna Mix version (shown in TestFlight or the App Store), your mixer model and its firmware version, and what you did just before the problem.</p>
+      <p>To help us help you quickly, include your iPad or iPhone model, its iPadOS or iOS version, the Stejna Mix version (shown in the App Store), your mixer model and its firmware version, and what you did just before the problem.</p>
     </div>
 
     <h2>Compatibility</h2>
     <ul>
       <li>Works with Midas MR18 and Behringer XR18&nbsp;/&nbsp;X18.</li>
       <li>MR12, XR12 and XR16 are planned for a later version.</li>
-      <li>Requires an iPad with iPadOS 16 or later. There is no iPhone version.</li>
-      <li>Stejna Mix connects to the mixer over Wi-Fi and does not need the internet.</li>
+      <li>Requires an iPad with iPadOS 16 or later, or an iPhone with iOS 16 or later. On iPhone, Stejna Mix is <a href="/pocket-mix/">Pocket Mix</a>.</li>
+      <li>Stejna Mix connects to the mixer over Wi-Fi. Mixing never needs the internet (see <a href="#offline">below</a>).</li>
     </ul>
 
     <h2>Questions</h2>
 
-    <h3>How do I install the beta?</h3>
-    <p>Stejna Mix is in beta on Apple's TestFlight while it waits for the App Store.</p>
-    <ol>
-      <li>On your iPad, install <strong>TestFlight</strong> from the App Store. It's free, from Apple.</li>
-      <li>Open your Stejna Mix invitation link or email on the iPad.</li>
-      <li>Tap <strong>Accept</strong>, then <strong>Install</strong>. Stejna Mix appears on your Home Screen.</li>
-    </ol>
-    <p>New builds appear in TestFlight; turn on Automatic Updates there to get them by themselves. Each beta build stops working 90 days after it was released, so keep it up to date.</p>
+    <h3>How do I install Stejna Mix?</h3>
+    <p>Get it from the <a href="https://apps.apple.com/app/id6821115687">App Store</a> on your iPad or iPhone. It's one app: your iPad shows the iPad mixer, and your iPhone shows <a href="/pocket-mix/">Pocket Mix</a>.</p>
 
-    <h3>How do I send feedback from the beta?</h3>
-    <p>Take a screenshot while using Stejna Mix and tap <strong>Share Beta Feedback</strong>, or open TestFlight, choose Stejna Mix and tap <strong>Send Beta Feedback</strong>. Email works too.</p>
+    <h3>What's free, and what does the purchase unlock?</h3>
+    <ul>
+      <li><strong>Free:</strong> the built-in demo mixer, and My Mix on your own mixer (personal monitoring: one player's own monitor mix).</li>
+      <li><strong>One purchase, $14.99:</strong> the full mixer on your own mixer, on every iPad and iPhone with your Apple Account. No subscription.</li>
+    </ul>
+
+    <h3 id="restore">I bought it on one device. How do I unlock the other?</h3>
+    <p>On the other iPad or iPhone, tap <strong>Full mixer</strong> (or <strong>Unlock&nbsp;...</strong> on the first screen), then <strong>Restore purchase</strong>. On iPad, <strong>Restore purchase</strong> is also in <strong>Setup &gt; Connection</strong>. You aren't charged again. Restoring needs the internet once.</p>
+
+    <h3 id="offline">Does it work at a gig with no internet?</h3>
+    <p>Yes. Stejna Mix talks to your mixer over the mixer's Wi-Fi, which needs no internet. Once a device has the full mixer unlocked, it stays unlocked with no internet or cell signal at all, and it never locks in the middle of a show.</p>
+    <p>Only three things need the internet: installing the app, buying the full mixer, and restoring it on a new device. <strong>Do those at home, on every device, before the gig.</strong></p>
 
     <h3>Stejna Mix doesn't find my mixer</h3>
     <ul>
-      <li><strong>Same network.</strong> The iPad and the mixer must be on the same Wi-Fi network: either join the iPad to the mixer's own Wi-Fi, or connect the mixer to the same router as the iPad, by cable or Wi-Fi.</li>
+      <li><strong>Same network.</strong> Your iPad or iPhone and the mixer must be on the same Wi-Fi network: either join it to the mixer's own Wi-Fi, or connect the mixer to the same router, by cable or Wi-Fi.</li>
       <li><strong>Local Network permission.</strong> Stejna Mix needs it to find and control the mixer (see below).</li>
       <li><strong>Guest and venue Wi-Fi</strong> often stop devices from seeing each other. Use the mixer's own Wi-Fi or your own router.</li>
       <li><strong>VPNs</strong> can block traffic on the local network. Try again with the VPN off.</li>
+      <li><strong>Moved the network switch on the back of your X Air?</strong> The mixer reads that switch (Ethernet, Wi-Fi client or Access point) only when it powers up. Turn the mixer off and on again after you move it. We measured this on an XR12.</li>
+      <li><strong>Did a factory reset?</strong> Your mixer can come back with a new name, and its own Wi-Fi network gets the new name too. On our XR12 the last two characters changed. Join the new network, then pick your mixer again in Stejna Mix: <strong>Setup &gt; Connection</strong> on the iPad, <strong>Gear &gt; Network</strong> on the iPhone.</li>
     </ul>
     <p>Once connected, Stejna Mix finds the mixer by itself. If the Wi-Fi drops, a banner says so and the app reconnects automatically.</p>
 
+    <h3 id="steady">How do I get the steadiest connection on an iPhone?</h3>
+    <p>Turn Bluetooth off in <strong>Settings &gt; Bluetooth</strong> before the show. Your iPhone's Wi-Fi and Bluetooth share one radio. On our bench, with Bluetooth on, an iPhone lost the mixer for 1 to 1.4 seconds about once a minute. With Bluetooth off, it didn't happen once.</p>
+    <p>Use Settings, not Control Center: the Control Center switch disconnects your headphones but keeps Bluetooth running for AirDrop and Handoff. <a href="#stomptap">StompTap</a> doesn't need Bluetooth, so you lose nothing.</p>
+
+    <h3 id="autojoin">After a Wi-Fi dropout, my iPad joined another network</h3>
+    <p>Your iPad or iPhone rejoins whichever known network it finds first: the venue's Wi-Fi, another band's router, your home network. Stejna Mix can't reach your mixer from there. On our bench, an iPad came back on our other mixer's network instead of the one it had just lost.</p>
+    <p>On every gig device, open <strong>Settings &gt; Wi-Fi</strong>, tap the <strong>(i)</strong> next to each network that isn't your mixer's, and turn off <strong>Auto-Join</strong>.</p>
+
     <h3>What is the Local Network permission?</h3>
-    <p>The first time you open Stejna Mix, iPadOS asks whether it may find and connect to devices on your local network. Tap <strong>Allow</strong>: that is how the app reaches your mixer. It doesn't connect to anything else.</p>
+    <p>The first time you open Stejna Mix, your iPad or iPhone asks whether it may find and connect to devices on your local network. Tap <strong>Allow</strong>: that is how the app reaches your mixer. Apart from the App Store, for the full mixer unlock, it doesn't connect to anything else.</p>
     <p>If you tapped Don't Allow, open <strong>Settings &gt; Privacy &amp; Security &gt; Local Network</strong> and turn on Stejna Mix. Then close Stejna Mix (swipe it away in the app switcher) and open it again.</p>
 
     <h3 id="stomptap">How do I tap tempo with my foot (StompTap)?</h3>
-    <p>Plug any MIDI footswitch into the mixer's own MIDI In, press <strong>Learn</strong> in Stejna Mix, and stomp once. From then on, every delay follows your foot. You don't need a MIDI interface, Bluetooth pairing or a cable to the iPad.</p>
+    <p>Plug any MIDI footswitch into the mixer's own MIDI In, press <strong>Learn</strong> in Stejna Mix, and stomp once. From then on, every delay follows your foot. You don't need a MIDI interface, Bluetooth pairing or a cable to your iPad or iPhone.</p>
     <p>How it works: the footswitch moves a control the mixer reports to the app. Stejna Mix turns that into a tap and puts the control straight back.</p>
 
     <h3>Can I open my existing scene files?</h3>
-    <p>Yes. Scene files saved by M-AIR Edit open directly in Stejna Mix. Put them in the Files app on your iPad (or in iCloud Drive) and load them from Stejna Mix. You see exactly what will change before anything is written.</p>
+    <p>Yes. Scene files saved by M-AIR Edit open directly in Stejna Mix. Put them in the Files app on your iPad or iPhone (or in iCloud Drive) and load them from Stejna Mix; in Pocket Mix, they're under the gear key, <strong>Scenes&nbsp;...</strong>. You see exactly what will change before anything is written.</p>
 
     <h3>Does Stejna Mix collect any data?</h3>
-    <p>No. It talks only to your mixer on your local network. See the <a href="/privacy/">privacy policy</a>.</p>
+    <p>No. It talks to your mixer on your local network, and to Apple's App Store for the full mixer unlock. See the <a href="/privacy/">privacy policy</a>.</p>
 
     <h3>Is Stejna Mix made by Midas or Behringer?</h3>
     <p>No. Stejna Mix is an independent app by Stejna Audio, not affiliated with, endorsed by or sponsored by Midas, Behringer or Music Tribe.</p>
@@ -90,11 +105,12 @@
   <div class="wrap">
     <ul>
       <li><a href="/">Stejna Mix</a></li>
+      <li><a href="/pocket-mix/">Pocket Mix</a></li>
       <li><a href="/support/">Support</a></li>
       <li><a href="/privacy/">Privacy</a></li>
       <li><a href="mailto:support@stejnaaudio.com">support@stejnaaudio.com</a></li>
     </ul>
-    <p>Stejna Mix is an independent app by Stejna Audio, not affiliated with, endorsed by or sponsored by Midas, Behringer or Music Tribe. Midas, Behringer, M-AIR Edit, Ultranet and the other product names mentioned are trademarks of their respective owners. iPad is a trademark of Apple Inc.</p>
+    <p>Stejna Mix is an independent app by Stejna Audio, not affiliated with, endorsed by or sponsored by Midas, Behringer or Music Tribe. Midas, Behringer, M-AIR Edit, Ultranet and the other product names mentioned are trademarks of their respective owners. iPad and iPhone are trademarks of Apple Inc.</p>
     <p>© 2026 Stejna Audio</p>
   </div>
 </footer>

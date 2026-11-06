@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Draws the site's two brand SVGs from the app's own sources, so the web mark cannot drift from the app's:
+"""Draws the site's brand SVGs from the app's own sources, so the web mark cannot drift from the app's:
   img/emblem.svg       the Stejna Audio emblem (Brand.h emblem(), no bezel): dot-matrix S in the measured cyan, one amber anode
   img/vfd-title.svg    "STEJNA MIX" as a VFD readout (Vfd.h paintDirect): unlit grid first, lit anodes, three filaments
+  img/vfd-pocket-mix.svg  "POCKET MIX", the same readout (the iPhone's launch screen lights the same words)
 The 5x7 font is read from the app repo next to this one (not copied): ../MAir_iPad_Lab/app/Source/VfdFont.h.
 Colours: the app's Vfd.h / Brand.h, which cite the brand's source of truth.
 Usage: python3 tools/make_svg.py [path/to/VfdFont.h]   (run from the site folder)"""
@@ -64,4 +65,5 @@ def readout(text, p=10.0):               # Vfd.h paintDirect, with one pitch of 
 
 open('img/emblem.svg', 'w').write(emblem())
 open('img/vfd-title.svg', 'w').write(readout('STEJNA MIX'))
-print('wrote img/emblem.svg, img/vfd-title.svg')
+open('img/vfd-pocket-mix.svg', 'w').write(readout('POCKET MIX'))
+print('wrote img/emblem.svg, img/vfd-title.svg, img/vfd-pocket-mix.svg')
